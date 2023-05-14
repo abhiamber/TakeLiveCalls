@@ -183,7 +183,11 @@ const EventDetails = () => {
             />
           </Box>
         )}
-        <Box>{joned && <EventJoinedByUser data={data} />}</Box>
+        <Box>
+          {localStorage.getItem("token") && joned && (
+            <EventJoinedByUser data={data} />
+          )}
+        </Box>
       </Container>
     </Box>
   );
