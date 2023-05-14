@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const EventLists = ({ events }) => {
-  // console.log(events)
+  console.log(events)
   return (
     <>
       <Box
