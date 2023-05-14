@@ -19,6 +19,7 @@ const EventLists = ({ events }) => {
         m="auto"
       >
         {events &&
+          events.length >= 0 &&
           events.map(({ _id, start, maxPlayer, name, eventExpired }) => (
             <Box
               key={_id}
