@@ -23,9 +23,10 @@ app.get("/", async (req, res) => {
 
 //Fixed starting end points for making nested dynamic route;
 app.use("/users", UserRouter);
-app.use(EventValidator);
 
 app.use("/events", GameRouter);
+app.use(EventValidator);
+
 app.use("/admin", GameAdminRouter);
 
 //server code for start or live my server at defined port;
