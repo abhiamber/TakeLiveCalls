@@ -15,7 +15,9 @@ const EventForm = () => {
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
-    let { name, value } = e.target;
+    let { name,  value} = e.target;
+        // console.log(value);
+
     setFormData({ ...formData, [name]: value });
   };
 

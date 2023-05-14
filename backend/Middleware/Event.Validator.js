@@ -12,7 +12,7 @@ const validate = async (req, res, next) => {
     AllEvents = AllEvents.map((elem) => {
       const currentDate = new Date();
 
-      if (elem.start >= currentDate) {
+      if (elem.start <= currentDate) {
         elem.eventExpired = true;
         elem.expiredUser = elem.requestToJoin;
         elem.requestToJoin = [];
